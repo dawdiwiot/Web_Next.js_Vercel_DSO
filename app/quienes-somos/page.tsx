@@ -8,11 +8,8 @@ export default function Productos() {
       <section className={styles.bannerWrapper}>
         <div className={`container mx-auto px-4 md:px-28 lg:px-8`}>
           <h1>Bienvenidos a Airdukon</h1>
-          <p>
-            Donde transformamos la manera en que experimentas el confort en tu
-            vida diaria. Nos enorgullece ser mucho más que una empresa de aire
-            acondicionado y ventilación; somos creadores de ambientes que
-            inspiran, refrescan y elevan tus momentos.
+          <p className={styles.textoGrande}>
+            Cambios Git Hub
           </p>
           <p>
             En Airdukon, nuestra pasión es superar tus expectativas. Desde
