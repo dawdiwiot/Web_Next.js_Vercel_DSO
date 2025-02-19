@@ -1,0 +1,39 @@
+.value {
+  font-weight: 600;
+  font-family: var(--font-inter);
+  line-height: 1.25rem;
+
+  img {
+    margin: 0 auto 1.25rem;
+    width: 3.25rem;
+  }
+
+  span {
+    text-align: center;
+    word-break: break-all;
+  }
+
+  &.even {
+    color: var(--secondary-color);
+  }
+
+  &.odd {
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .value {
+    img {
+      width: 6.25rem;
+      height: 6.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    span {
+      max-width: 6rem;
+      display: block;
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.wrapper {
+  padding-top: 3rem;
+  background-image: url(/whereToFindUs-bg-lg.png);
+  background-position: center center;
+  padding-bottom: 3rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (width >= 768px) {
+  .wrapper {
+    margin-top: 5.5rem;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .wrapper {
+    padding: 12rem 0 19rem;
+    background-size: contain;
+  }
+}

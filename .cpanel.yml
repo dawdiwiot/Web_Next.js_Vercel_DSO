@@ -1,0 +1,31 @@
+# cpanel.yml
+
+# Define la versión del archivo cPanel (opcional)
+version: 1
+
+# Los siguientes comandos se ejecutarán antes del despliegue.
+pre_deploy:
+  # Instala todas las dependencias del proyecto listadas en package.json
+  - npm install
+
+# Estos comandos se ejecutan justo antes de activar el nuevo código.
+deploy:
+  # Compila la aplicación Next.js y genera los archivos estáticos necesarios.
+  - npm run build
+  # Detiene la aplicación de Next.js si está corriendo (en caso de que se haya desplegado previamente). El uso de || true asegura que si no está corriendo, el comando no genere un error.
+  #- pm2 stop nextjs-app || true
+  # Inicia la aplicación de Next.js utilizando PM2, un administrador de procesos para aplicaciones Node.js, para asegurar que la aplicación siga corriendo incluso después de desconectar tu sesión SSH.
+  #- pm2 start npm --name "nextjs-app" -- start
+  # Limpia la carpeta public_html para asegurarse de que no haya archivos antiguos
+  - rm -rf /home/yr7diu1a0bai/public_html/*
+  # Copia los archivos estáticos generados en la carpeta .next a public_html
+  - cp -R .next/static /home/yr7diu1a0bai/public_html/static
+  # Copia el archivo HTML de exportación (si estás usando export) o cualquier otro archivo necesario para el cliente
+  - cp -R /home/yr7diu1a0bai/ruta_a_tu_proyecto/build/* /home/yr7diu1a0bai/public_html
+
+# Comandos a ejecutar después del despliegue
+post_deploy:
+  # Limpiar archivos no necesarios
+  - rm -rf .next/cache
+  #- pm2 save  # Guarda la configuración actual de PM2 para que la aplicación se inicie automáticamente después de un reinicio del servidor.
+  - echo "Despliegue de Next.js completado correctamente" # Muestra un mensaje indicando que el despliegue fue exitoso.

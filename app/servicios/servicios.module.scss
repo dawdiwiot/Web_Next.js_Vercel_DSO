@@ -1,0 +1,134 @@
+.infoSection,
+.infoSectionAir {
+  gap: 2.75rem;
+  p {
+    padding: 0;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.infoSectionAir {
+  margin-top: -1.6rem;
+  margin-bottom: -2rem;
+}
+
+.contentWrapper {
+  margin-top: 1rem;
+  border-top: 1px solid #aaa9a9;
+  background-color: var(--grey3);
+  padding-top: 0.75rem;
+  padding-bottom: 1rem;
+  text-align: center;
+
+  h1,
+  h2 {
+    margin-bottom: 5rem;
+    color: var(--secondary-color);
+  }
+}
+
+.card {
+  padding-bottom: 5rem;
+  img {
+    margin: auto;
+  }
+
+  h3 {
+    margin: 1.25rem 0;
+  }
+}
+
+@media screen and (width >= 768px) {
+  .wrapper {
+    margin-top: 6rem;
+  }
+
+  .infoSection,
+  .infoSectionAir {
+    gap: 0.5rem;
+    margin-top: -1rem;
+    h2 {
+      white-space: wrap;
+    }
+  }
+
+  .infoSectionAir {
+    margin-top: 4.5rem;
+  }
+
+  .contentWrapper {
+    padding-top: 3rem;
+
+    h1,
+    h2 {
+      margin-bottom: 6rem;
+    }
+  }
+
+  .contentWrapperAir {
+    padding-bottom: 3.5rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 1.25rem;
+
+    img {
+      height: 100%;
+      margin: inherit;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .wrapper {
+    margin-top: 4rem;
+  }
+
+  .contentWrapper {
+    margin-top: 6.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .cardWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card {
+      width: 30rem;
+      max-width: 50%;
+      padding-bottom: 3.5rem;
+
+      img {
+        width: 72px;
+        height: fit-content;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+    }
+  }
+
+  .infoSection,
+  .infoSectionAir {
+    p {
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .infoSectionAir {
+    margin-top: 6rem;
+    padding-bottom: 5rem;
+  }
+}

@@ -1,0 +1,90 @@
+.bannerWrapper {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("/whoAreWe-bg-lg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 1.5rem;
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.ourValues {
+  text-align: center;
+}
+
+.valuesWrapper {
+  border: 3px solid var(--grey2);
+  border-left: none;
+  border-right: none;
+  margin-top: 1.25rem;
+  padding: 2.75rem 3rem 3rem 3rem;
+}
+
+.valuesDescriptions {
+  margin-top: 4.5rem;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  b {
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (width >= 768px) {
+  .bannerWrapper {
+    padding-bottom: 8.75rem;
+    h1 {
+      margin-bottom: 5.25rem;
+    }
+  }
+
+  .valuesWrapper {
+    padding: 3.25rem 0 3.75rem;
+  }
+
+  .valuesDescriptions {
+    p {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .bannerWrapper {
+    padding-top: 7.75rem;
+    padding-bottom: 7rem;
+    p {
+      max-width: 47rem;
+      margin: 0 auto 2rem;
+    }
+  }
+
+  .valuesWrapper {
+    justify-content: space-around;
+    padding: 3.5rem 0 1rem;
+    margin-top: 3rem;
+  }
+
+  .valuesDescriptions {
+    margin-top: 6rem;
+    padding: 0 19.5rem;
+    margin-bottom: -4.5rem;
+
+    p {
+      margin-bottom: 1.9rem;
+    }
+  }
+}

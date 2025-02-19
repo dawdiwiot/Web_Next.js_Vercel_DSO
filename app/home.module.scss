@@ -1,0 +1,352 @@
+.homeBannerWrapper {
+  margin-bottom: 2rem;
+}
+
+.ourBrandCarouselWrapper {
+  border-width: 3px 0px 3px 0px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to right,
+    #5fc5d7 0%,
+    #1a4d73 50%,
+    #7b5e90 100%
+  );
+  margin-bottom: 3rem;
+}
+
+.separator {
+  border-bottom: 3px solid var(--grey2);
+}
+
+.productsGridWrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+  picture {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item4,
+  .item5 {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .item1 {
+    grid-area: a;
+  }
+
+  .item2 {
+    grid-area: b;
+  }
+
+  .item3 {
+    grid-area: c;
+  }
+
+  .item4 {
+    grid-area: d;
+  }
+
+  .item5 {
+    display: none;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4 {
+    position: absolute;
+  }
+
+  .circle1 {
+    top: 3%;
+    left: 33%;
+  }
+
+  .circle2 {
+    top: 60%;
+    left: 33%;
+  }
+
+  .circle3 {
+    top: 15%;
+    left: 56%;
+  }
+
+  .circle4 {
+    top: 10%;
+    left: 50%;
+  }
+}
+
+.ourServiceWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.serviceList {
+  display: flex;
+  overflow-x: auto;
+  padding: 2.5rem 3rem;
+  gap: 3.5rem;
+  max-width: 1200px;
+  scroll-snap-type: x mandatory;
+
+  .card {
+    flex: 0 0 auto;
+    overflow: hidden;
+    padding: 2.5rem 1rem 2.5rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 3rem;
+    color: var(--white);
+    width: 16rem;
+    height: 18.5rem;
+
+    h3 {
+      color: var(--white);
+    }
+
+    svg {
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+      margin-top: 7rem;
+      width: 3.25rem;
+      height: 3.25rem;
+    }
+  }
+
+  .imageCard {
+    position: relative;
+    flex: 0 0 auto;
+    overflow: hidden;
+    width: 15.75rem;
+    height: 18.5rem;
+    border-radius: 4rem;
+    position: relative;
+    background-color: transparent;
+    opacity: 1;
+
+    &::before {
+      transition: background-color 0.8s ease, opacity 0.8s ease;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: var(--secondary-color);
+      opacity: 0;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0.6;
+      }
+
+      span {
+        opacity: 0.7;
+      }
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      background-color: var(--white);
+      margin: 1rem 0.75rem;
+      border-radius: 4.5rem;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      font-weight: 600;
+      transition: opacity 0.8s ease;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 0.25rem;
+    border: 1px solid transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--grey2);
+    border: 1px solid transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+    outline: 1px solid var(--black);
+  }
+}
+
+@media screen and (width >= 768px) {
+  .homeBannerWrapper {
+    margin-top: 4.75rem;
+    margin-bottom: 4rem;
+  }
+
+  .ourBrandCarouselWrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .productsGridWrapper {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:
+      "a e"
+      "a b"
+      "c d";
+    column-gap: 0rem;
+    row-gap: 1.25rem;
+    margin-top: 2.5rem;
+    padding-bottom: 6rem;
+    .circle2 {
+      top: 50%;
+    }
+
+    .item5 {
+      grid-area: e;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 3rem;
+      padding: 1rem 1.75rem 0;
+    }
+
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5 {
+      margin: 0;
+    }
+  }
+
+  .ourServiceWrapper {
+    padding-top: 2rem;
+    align-items: flex-end;
+  }
+
+  .serviceList {
+    padding: 2rem 0rem 5rem 0rem;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .homeBannerWrapper {
+    margin-top: 7rem;
+    margin-bottom: 8.5rem;
+  }
+
+  .productsGridWrapper {
+    grid-template-columns: 39% 30% 1fr;
+    grid-template-rows: 33% 7% 47%;
+    grid-template-areas:
+      "a e c"
+      "a b c"
+      "a b d";
+    column-gap: 30px;
+    row-gap: 30px;
+    padding-bottom: 10rem;
+    border-bottom: 3px solid var(--grey2);
+    .item5 {
+      padding: 1.5rem 1.5rem 2rem;
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+        margin-left: -0.5rem;
+      }
+    }
+
+    .circle2 {
+      top: 51%;
+    }
+  }
+
+  .ourBrandCarouselWrapper {
+    margin-bottom: 6.5rem;
+  }
+
+  .ourServiceWrapper {
+    padding-top: 4rem;
+  }
+
+  .serviceList {
+    max-width: fit-content;
+    gap: 2.5rem;
+    padding: 2.5rem 0 18rem 0;
+
+    .card,
+    .imageCard {
+      width: 30rem;
+      height: 36rem;
+    }
+
+    .card {
+      padding: 6.5rem 2.5rem;
+      svg {
+        width: 6.5rem;
+        height: 6.5rem;
+        margin-top: 11rem;
+      }
+    }
+
+    .imageCard {
+      span {
+        bottom: 2rem;
+        margin: 2.9rem;
+        padding: 2rem 1rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (width >= 1536px) {
+  .productsGridWrapper {
+    grid-template-columns: 39% 30% 1fr;
+    grid-template-rows: 37% 7% 47%;
+    grid-template-areas:
+      "a e c"
+      "a b c"
+      "a b d";
+
+    .item5 {
+      padding: 2.75rem 5.5rem;
+
+      p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      svg {
+        width: 5.5rem;
+        height: 5.5rem;
+        margin-left: -0.5rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .circle2 {
+      top: 51%;
+    }
+  }
+}

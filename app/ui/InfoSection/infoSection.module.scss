@@ -1,0 +1,75 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.imageWrapper {
+  margin: auto;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+  align-items: center;
+
+  p {
+    padding: 0 0.85rem;
+  }
+}
+
+.buttonsWrappers {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (width >= 768px) {
+  .wrapper {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .imageWrapper {
+    width: 100%;
+  }
+  .image {
+    width: fit-content;
+  }
+
+  .infoWrapper {
+    p {
+      padding: 0;
+    }
+  }
+
+  .infoWrapper {
+    text-align: end;
+    align-items: end;
+    max-width: 300px;
+    gap: 3.5rem;
+  }
+
+  .buttonsWrappers {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: -0.75rem;
+  }
+
+  .title {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .infoWrapper {
+    max-width: 50%;
+    gap: 6rem;
+  }
+
+  .buttonsWrappers {
+    margin-top: -2rem;
+  }
+}

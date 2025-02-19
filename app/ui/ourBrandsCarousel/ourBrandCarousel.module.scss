@@ -1,0 +1,51 @@
+.wrapper {
+  :global {
+    .swiper {
+      height: 8rem;
+    }
+    .swiper-slide {
+      background-color: var(--white);
+      display: flex;
+      padding: 2.5rem;
+    }
+
+    .swiper-pagination {
+      bottom: 0;
+    }
+  }
+}
+
+.brandImage {
+  margin: auto;
+  height: inherit;
+}
+
+@media screen and (width >= 768px) {
+  .wrapper {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    :global {
+      .swiper {
+        height: 8rem;
+      }
+      .swiper-wrapper {
+        height: 8rem;
+      }
+
+      .swiper-pagination {
+        bottom: 0rem;
+      }
+    }
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .wrapper {
+    :global {
+      .swiper,
+      .swiper-wrapper {
+        height: 10.5rem;
+      }
+    }
+  }
+}
